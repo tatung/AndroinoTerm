@@ -49,7 +49,7 @@ public class MainActivity extends Activity {
 		this.mHandler = new Handler(){
 			public void handleMessage(Message msg) {
 				messageReceived(msg);
-			}
+			}git
 		};
 	}
 	
