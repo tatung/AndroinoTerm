@@ -28,8 +28,11 @@ public class FSKModule {
 	private static double SAMPLING_TIME = 1.0/SAMPLING_FREQUENCY; //ms
 
 	// reading zero+155(high)+1(low)+8bit+stop+end+zero
-	private static int FREQUENCY_HIGH = 3150;
-	private static int FREQUENCY_LOW = 1575;
+//	private static int FREQUENCY_HIGH = 3150;
+//	private static int FREQUENCY_LOW = 1575;
+
+	private static int FREQUENCY_HIGH = 7350;
+	private static int FREQUENCY_LOW = 4900;
 	
 	//high: 7 samples/peak
 	//low : 14 samples/peak
@@ -206,6 +209,7 @@ public class FSKModule {
 		// extract message from the bit array
 		int message = m.decodeUniqueMessage(bits, sound, nPeaks);
 		debugInfo("decodeSound(): message="+message + ":" + Integer.toBinaryString(message));
+		Log.e("FSKModule~~~~", message + "");
 		return message;
 	}
 	
